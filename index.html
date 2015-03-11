@@ -1,0 +1,115 @@
+<DOCTYPE! html>
+
+<head>
+	<meta name="description" content="A simple web page for experimentation with Bootstrap using Sass and AngularJS.">
+	<meta name="authors" content="Lucas McLaughlin, Xi Wen, Arica Liu">
+	<meta charset="UTF-8">
+
+	<script>
+		/*
+		 * This function changes the colors of the buttons in the button group
+		 * depending on which is clicked. the clicked button is changed to whatever
+		 * color is passed to the function. The other button colors change to the default.
+		 */
+		function changeColor(btn, color) {
+			// Translate to AngularJS
+			var btns = ['btn-red', 'btn-green', 'btn-blue'];
+
+			for ( i = 0 ; i < btns.length ; i++ ) {
+				var curr = document.getElementById(btns[i]);
+
+				curr.style.backgroundColor = '';
+			}
+
+			btn.style.backgroundColor = color;
+		}
+	</script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<h1>Experimentation</h1>
+		<h3>A simple page for experimenting with Bootstrap using Sass and AngularJS.</h3>
+		
+		</br>
+		<p>This is a paragraph element. Below are columns:</p>
+		
+		<div class="row">
+			<div>.col-md-1</div>
+			<div>.col-md-1</div>
+			<div>.col-md-1</div>
+		</div>
+		<div class="row">
+			<div>.col-md-8</div>
+			<div>.col-md-4</div>
+		</div>
+		<div class="row">
+			<div>.col-md-4</div>
+			<div>.col-md-4</div>
+			<div>.col-md-4</div>
+		</div>
+		<div class="row">
+			<div>.col-md-6</div>
+			<div>.col-md-6</div>
+		</div>
+
+		</br>
+		<p>On to button groups:</p>
+
+		<div>
+			<button type="button" id="btn-red" onclick="changeColor(this, 'red')">Red</button>
+			<button type="button" id="btn-green" onclick="changeColor(this, 'green')">Green</button>
+			<button type="button" id="btn-blue" onclick="changeColor(this, 'blue')">Blue</button>
+		</div>
+
+		</br>
+		<p>And input groups:</p>
+
+		<div>
+			<span>@</span>
+			<input type="text" placeholder="Username">
+		</div>
+
+		<div>
+			<input type="text" placeholder="Recipient's username">
+			<span>@example.com</span>
+		</div>
+
+		<div class="input-group">
+			<span>$</span>
+			<input type="text">
+			<span>.00</span>
+		</div>
+
+		</br>
+		<p>Maybe some labels:</p>
+
+		<span>Default</span>
+		<span>Primary</span>
+		<span>Success</span>
+		<span>Info</span>
+		<span>Warning</span>
+		<span>Danger</span>
+
+		</br>
+		<p>Or some alerts:</p>
+
+		<div>Well done! You successfully read this important alert message.</div>
+		<div>Heads up! This alert needs your attention, but it's not super important.</div>
+		<div>Warning! Better check yourself, you're not looking too good.</div>
+		<div>Oh snap! Change a few things up and try submitting again.</div>
+
+		</br>
+		<p>Finally, a list group:</p>
+
+		<ul class="list-group">
+			<li>Cras justo odio</li>
+			<li>Dapibus ac facilisis in</li>
+			<li>Morbi leo risus</li>
+			<li>Porta ac consectetur ac</li>
+			<li>Vestibulum at eros</li>
+		</ul>
+	</div>
+</body>
+
+</html>
