@@ -1,3 +1,26 @@
-h1 {
-	color: blue;
+@import "compass";
+@import "bootstrap";
+
+body {
+	@include container-fixed;
+
+	@media (min-width: $screen-sm-min) {
+		width: $container-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		width: $container-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		width: $container-lg;
+	}
+
+	.site-header {
+		@include make-row;
+		.site-logo {
+			@include make-sm-column(3);
+		}
+		.site-nav {
+			@include make-sm-column(9);
+		}
+	}
 }
